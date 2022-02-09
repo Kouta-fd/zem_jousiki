@@ -26,7 +26,7 @@ body,
 .fadeout {
   animation: fadeOut 3s;
   animation-fill-mode: both;
-  z-index: 0;
+  z-index: 20;
 }
 @keyframes fadeOut {
   0% {
@@ -52,7 +52,10 @@ canvas {
 
 /* メインコンテンツ */
 .main {
-  background-image:  radial-gradient(  circle, #fff 15%, #000 );
+  position: relative;
+  /* z-index: 10;
+  opacity: 0.6; */
+  /* background-image:  radial-gradient(  circle, #000 15%, #fff ); */
 }
 .sub-content {
   height: 100%;
@@ -74,6 +77,7 @@ canvas {
 }
 h1 {
   font-size: 5rem;
+  color: rgb(206, 206, 206);
 }
 .item a {
   position: absolute;
@@ -94,16 +98,43 @@ h1 {
 }
 .item a:hover {
   opacity: 0.9;
-  animation-name: sample04;
+  animation-name: item;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-iteration-count: initial;
 }
-@keyframes sample04{
+@keyframes item {
   0%{
     transform: scale(0.8);    
   }
   100%{
     transform: scale(1);    
   }
+}
+.back-iamge {
+  display: block;
+  position: relative;
+}
+.back-iamge::before {
+  z-index: -10;
+  position: absolute;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("https://biz.trans-suite.jp/wp-content/uploads/2018/08/Fotolia_214333535_Subscription_Monthly_M.jpg");
+  background-size: cover;
+}
+.gradient::before {
+  z-index: 0;
+  opacity: 0.95;
+  position: absolute;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image:  radial-gradient(  circle, #000 15%, #fff ); 
+  background-size: contain;
 }
