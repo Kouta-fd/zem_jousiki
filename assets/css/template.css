@@ -1,0 +1,15 @@
+.text1 {
+  text-align: center;
+}
+#image1 {
+  width: 49%;
+  height: auto;
+}
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+#text2 {
+  width: 45%;
+}
