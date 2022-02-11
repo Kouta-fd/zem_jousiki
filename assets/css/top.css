@@ -11,7 +11,7 @@ body,
   position: relative;
   z-index: 1;
 }
-.view {
+.view .first {
   position: absolute;
   background: #000;
   z-index: 100;
@@ -20,20 +20,35 @@ body,
   top: 0;
   left: 0;
 }
-.view .content {
+.view .first .content {
   color: #fff;
 }
-.fadeout {
+.fadeout .first {
   animation: fadeOut 3s;
   animation-fill-mode: both;
-  z-index: 20;
 }
 @keyframes fadeOut {
   0% {
     opacity: 1;
+    z-index: 10;
   }
   100% {
     opacity: 0;
+    z-index: -10;
+  }
+}
+.fadeout .main {
+  animation: fadein 3s;
+  animation-fill-mode: both;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 1;
+    z-index: 10;
   }
 }
 .content {
@@ -138,3 +153,137 @@ h1 {
   background-image:  radial-gradient(  circle, #000 15%, #fff ); 
   background-size: contain;
 }
+
+/* 
+
+グラデーション
+分野のテーマの色にする
+背景に負けないように淡い色 
+フォントの種類　達筆っぽい感じ 
+各分野のところを立体的に見せる
+
+*/
+
+/* アニメーション */
+.fuwafuwa {
+  position: absolute;
+  display: block;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: fuwafuwa1;
+  border-radius: 50%;
+  pointer-events: auto;
+  z-index: 1;
+  cursor: pointer;
+}
+/* バリエーション１ */
+@-webkit-keyframes fuwafuwa1 {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  30% {
+    transform: translate(30px, -100px) rotate(-4deg);
+  }
+  50% {
+    transform: translate(60px, 100px) rotate(0deg);
+  }
+  70% {
+    transform: translate(70px, -60px) rotate(0deg);
+  }
+  100% {
+    transform: translate(100px, 60px) rotate(5deg);
+  }
+}
+@keyframes fuwafuwa1 {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  30% {
+    transform: translate(30px, -100px) rotate(-4deg);
+  }
+  50% {
+    transform: translate(60px, -200px) rotate(0deg);
+  }
+  70% {
+    transform: translate(70px, -100px) rotate(0deg);
+  }
+  100% {
+    transform: translate(100, 0px) rotate(5deg);
+  }
+}
+/* バリエーション２ */
+@-webkit-keyframes fuwafuwa2 {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  30% {
+    transform: translate(-50px, 50px) rotate(-4deg);
+  }
+  50% {
+    transform: translate(-100px, 100px) rotate(0deg);
+  }
+  70% {
+    transform: translate(-150px, 150px) rotate(4deg);
+  }
+  100% {
+    transform: translate(-200px, 200px) rotate(7deg);
+  }
+}
+
+@keyframes fuwafuwa2 {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  30% {
+    transform: translate(-50px, 50px) rotate(-4deg);
+  }
+  50% {
+    transform: translate(-100px, 100px) rotate(0deg);
+  }
+  70% {
+    transform: translate(-150px, 150px) rotate(4deg);
+  }
+  100% {
+    transform: translate(-200px, 200px) rotate(7deg);
+  }
+}
+
+/* バリエーション3 */
+@-webkit-keyframes fuwafuwa3 {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  30% {
+    transform: translate(-150px, -60px) rotate(-4deg);
+  }
+  50% {
+    transform: translate(-250px, -30px) rotate(0deg);
+  }
+  70% {
+    transform: translate(-200px, 0px) rotate(4deg);
+  }
+  100% {
+    transform: translate(-300px, 10px) rotate(7deg);
+  }
+}
+
+@keyframes fuwafuwa3 {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  30% {
+    transform: translate(-150px, -60px) rotate(-4deg);
+  }
+  50% {
+    transform: translate(-250px, -30px) rotate(0deg);
+  }
+  70% {
+    transform: translate(-200px, 0px) rotate(4deg);
+  }
+  100% {
+    transform: translate(-300px, 10px) rotate(7deg);
+  }
+}
+

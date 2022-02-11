@@ -1,0 +1,157 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: serif;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto 80px;
+  max-width: 1400px;
+}
+
+.container2{
+  width: 100%;
+}
+
+.text1 {
+  text-align: center;
+}
+
+#text2 {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+p{
+    font-size: 300%;
+}
+
+h1{
+    padding-bottom: 25%;
+    padding-top: 25%;
+    font-size: 80px;
+    font-family: serif;
+    background-image: url(../image/wa.jpg);
+    background-position: center;
+    text-align: center;
+    background-size: 110%;
+}
+
+h2{
+    font-size: 40px;
+}
+
+#image1 {
+  width: 49%;
+  height: auto;
+}
+
+.flex1 {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.flex2{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+}
+
+.right{
+    text-align: right;
+}
+
+.box1{
+    padding: 0.5em 1em;
+    margin-top: 10%;
+    color: #030303;
+    background: white;
+    border-top: solid 5px #eec439;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    padding: 50px;
+}
+
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box2 {
+  padding: 2em;
+  margin: 10% auto;
+  color: #232323;
+  background: #fff8e8;
+  border-left: solid 10px #ffc06e;
+  width: 60%;
+  
+}
+
+.box2 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.box3{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+  border-left: double 7px #ffc06e;/*左線*/
+  border-right: double 7px #ffc06e;/*右線*/
+}
+.box3 p {
+  margin: 0; 
+  padding: 0;
+}
+/*==================================================
+ふわっ
+===================================*/
+
+
+/* fadeUp */
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+    
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+     
+    .fadeUpTrigger{
+        opacity: 0;
+    }
+
+ul{
+  font-size: 200%;
+}
+
+ol{
+  padding-top: 20px;
+}
+ol a {
+  color: #808080;
+}
+ol a:hover {
+  opacity: 0.6;
+}

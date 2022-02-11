@@ -1,5 +1,5 @@
 //最初のメッセージ画面
-const view = document.getElementById("first");
+const view = document.getElementById("top");
 
 window.onload = function () {
   view.classList.add("view");
