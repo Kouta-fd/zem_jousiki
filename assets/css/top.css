@@ -38,10 +38,10 @@ body,
   }
 }
 .fadeout .main {
-  animation: fadein 3s;
+  animation: fadein 8s;
   animation-fill-mode: both;
 }
-@keyframes fadeOut {
+@keyframes fadein {
   0% {
     opacity: 0;
     z-index: 0;
@@ -89,6 +89,8 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 9;
+  pointer-events:none;
 }
 h1 {
   font-size: 5rem;
@@ -155,13 +157,11 @@ h1 {
 }
 
 /* 
-
 グラデーション
 分野のテーマの色にする
 背景に負けないように淡い色 
-フォントの種類　達筆っぽい感じ 
+フォントの種類　達筆っぽい感じ 
 各分野のところを立体的に見せる
-
 */
 
 /* アニメーション */
@@ -286,4 +286,3 @@ h1 {
     transform: translate(-300px, 10px) rotate(7deg);
   }
 }
-
