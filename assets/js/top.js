@@ -14,6 +14,7 @@ window.onload = function () {
     let addFieldChild = document.createElement('a');
     addField.appendChild(addFieldChild);
     addFieldChild.textContent = items[i].title;
+    addFieldChild.setAttributeNS(null,'class','font-zen')
     addFieldChild.setAttributeNS(null,'href',`${items[i].path}`);
     if(items[i].move==0) {
       addField.style.animationName = "fuwafuwa1";

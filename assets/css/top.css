@@ -7,6 +7,11 @@ body,
 .main {
   height: 100%;
 }
+.font-zen {
+  font-family: zen-antique, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
 .main {
   position: relative;
   z-index: 1;
@@ -38,7 +43,7 @@ body,
   }
 }
 .fadeout .main {
-  animation: fadein 8s;
+  animation: fadein 7s;
   animation-fill-mode: both;
 }
 @keyframes fadein {

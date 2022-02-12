@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>トップページ</title>
     <link rel="stylesheet" href="./assets/css/top.css" />
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'ezo3mub',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
   </head>
   <body id="top">
     <div class="first">
-      <h2 id="message" class="content">常識とは常に移り変わるものである</h2>
+      <h2 id="message" class="content font-zen">常識とは常に移り変わるものである</h2>
     </div>
     <div class="main">
       <div class="back-iamge"></div>
@@ -16,7 +26,7 @@
       <div id="fuwafuwa-wrap" class="sub-content">
       </div>
       <div class="main-content">
-        <h1>change<br />your<br />bias.</h1>
+        <h1 class="font-zen">change<br />your<br />bias.</h1>
       </div>
     </div>
     <script src="./assets/js/top.js"></script>
